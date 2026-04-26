@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Guidance Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #8a9be9ff);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: #F7F7F7;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4B3E2F;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #CCC;
+            border-radius: 10px;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="radio"] {
+            margin-top: 10px;
+            margin-right: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #22C55E;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #16A34A;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #F0EDEB;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎓 Career Guidance Chatbot</h2>
+        <form method="POST" action="/">
+            <label>👤 Your Name:</label>
+            <input type="text" name="name" placeholder="e.g. Priya Sharma" required>
+
+            <label>📞 Phone Number:</label>
+            <input type="text" name="phone" placeholder="e.g. 9876543210" required pattern="[0-9]{10}">
+
+            <label>📘 Highest Education:</label>
+            <input type="text" name="education" placeholder="e.g. B.Tech in Computer Science" required>
+
+            <label>🚀 What do you want to do next?</label>
+            <input type="radio" name="path_choice" value="Continue Education" required> Continue Education
+            <input type="radio" name="path_choice" value="Get a Job" required> Get a Job
+
+            <label>💬 Describe your future plans or interests:</label>
+            <textarea name="plans" rows="4" placeholder="Optional: e.g. I want to go abroad for studies or build a startup..."></textarea>
+
+            <button type="submit">Get My Career Advice</button>
+        </form>
+    </div>
+    <footer>Made with ❤️ for student success</footer>
+</body>
+</html>
